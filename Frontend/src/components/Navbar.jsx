@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {GiHamburgerMenu} from 'react-icons/gi'
+import { NavLink } from 'react-router-dom';
 
 const Navbar = () => {
 
@@ -8,7 +9,7 @@ const Navbar = () => {
 
   return (
     <nav>
-      <div className='logo'>Event Planner</div>
+      <div className='logo'>MY WEBSITE</div>
       <div className={show ? "navLinks showmenu" : "navLinks"}>
         <div className='links'>
           <Link to='hero' spy={true} smooth={true} duration={500}>

@@ -42,7 +42,7 @@ const Services = () => {
     <h2>OUR SERVICES</h2>
     <div className='banner'>
       {
-        services.map(element => {
+        services.map((element) => {
           return (
             <div className='item' key={element.id}>
               <h3>{element.title}</h3>

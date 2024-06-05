@@ -12,7 +12,17 @@ const Contact = () => {
   
   const handleSendMessage=async(e)=>{
     e.preventDefault();
-    await axios.post("http://localhost:4000/api/v1/message/send",{name,email, subject, message}, {withCredentials: true, headers: {"Content-Type" : "application/json"}}
+    await axios
+    .post("http://localhost:4000/api/v1/message/send",
+
+    {name,email, subject, message}, 
+
+    // {withCredentials: true, 
+    //   headers: {"Content-Type" : "application/json", "Access-Control-Allow-Origin": "http://localhost:4000/" },
+      
+    // }
+  )
+
       .then((res) =>{
         toast.success(res.data.message);
         setName("");
@@ -20,11 +30,12 @@ const Contact = () => {
         setMessage("");
         setSubject("");
       })
+
       .catch((error) =>{
-        toast.error(error.response.message);
+        toast.error(error.response.data.message);
       })
-    );
-  }
+    ;
+  };
 
 
   return (
@@ -62,7 +73,6 @@ const Contact = () => {
             </div>
             <input type="text" placeholder='Subject' value={subject} onChange={(e)=>setSubject(e.target.value)} />
             <textarea rows={10} placeholder='Message' value={message} onChange={(e)=>setMessage(e.target.value)} />
-
             <button type="submit">Send</button>
           </form>
         </div>

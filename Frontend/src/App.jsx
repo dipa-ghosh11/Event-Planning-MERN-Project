@@ -14,7 +14,7 @@ function App() {
 
   return (
     <Router>
-       <Navbar/>
+       {/* <Navbar/>
       <Routes>
         <Route path='/' element={<>
           <HeroSection/>
@@ -28,7 +28,20 @@ function App() {
         </Routes>
         <Contact/>
         <Footer/>
-        <Toaster/>
+        <Toaster/> */}
+
+
+
+
+      <Navbar />
+      <HeroSection />
+      <Services />
+      <About />
+      <Contact />
+      <Footer />
+      <Toaster />
+
+
     </Router>
   )
 }

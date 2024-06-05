@@ -51,7 +51,7 @@ nav::after {
   width: 100%;
   background: rgb(201, 201, 201);
 }
-nav .logo {
+nav .logo  {
   flex: 1;
   display: flex;
   align-items: center;

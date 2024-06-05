@@ -13,7 +13,7 @@ export const sendMessage=async (req,res) =>{
                             success:false,
                             message:"All fields are required",
                         }
-                    )
+                    );
                 }
 
                 await Message.create({name, email, subject, message});
@@ -45,7 +45,7 @@ export const sendMessage=async (req,res) =>{
                         errorMessage += error.errors.message.message+ " "
                     }
 
-                    return res.status(200).json({
+                    return res.status(400).json({
                         success: false,
                         message: errorMessage,
                     });
