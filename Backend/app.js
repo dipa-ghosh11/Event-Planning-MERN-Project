@@ -5,18 +5,18 @@ import msgRouter from "./router/msgRouter.js"
 import cors from 'cors';
 
 const app=express();
-dotenv.config({path: "./config/config.env"});
+dotenv.config({path: "./config/.env"});
 
 
 // connection between frontend and backend
 app.use(
     cors(
-//         {
-//      origin: [process.env.FRONTEND_URL],
-//      methods: ["POST"],
-//      credentials: true,
+        {
+     origin: [process.env.FRONTEND_URL],
+     methods: ["POST"],
+     credentials: true,
         
-//   }
+  }
     )
 );
 

@@ -17,10 +17,10 @@ const Contact = () => {
 
     {name,email, subject, message}, 
 
-    // {withCredentials: true, 
-    //   headers: {"Content-Type" : "application/json", "Access-Control-Allow-Origin": "http://localhost:4000/" },
+    {withCredentials: true, 
+      headers: {"Content-Type" : "application/json", "Access-Control-Allow-Origin": "http://localhost:4000/" },
       
-    // }
+    }
   )
 
       .then((res) =>{
